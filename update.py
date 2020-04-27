@@ -28,7 +28,4 @@ def update():
 
 while True:
   update()
-  os.system("git add -A")
-  os.system("git commit -m turn")
-  os.system("git push origin master")
   time.sleep(420)
