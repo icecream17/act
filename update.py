@@ -14,7 +14,7 @@ class mainThing:
             os.system("git add -A")
             os.system("git commit -m \"next turn\"")
             os.system("git push origin master")
-            time.sleep(60)
+            time.sleep(420)
   
   def update():
     moves = ["up", "down", "left", "right"]
