@@ -1,3 +1,4 @@
+
 #
 # This is the first time trying python. Because js can't really edit files.
 # Hopefully I can successfully update the text.
@@ -25,7 +26,9 @@ def update():
   
   open("map", "w").write(c)
 
-
 while True:
   update()
-  time.sleep(420)
+  os.system('git add -A')
+  os.system("git commit -m \"Update move\"")
+  os.system('git push')
+  time.sleep(10)
