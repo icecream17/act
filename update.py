@@ -15,9 +15,9 @@ a = random.randrange(1, 1000) % 2
 b = (moves.index(text) + 4) % 4
 
 if a > b:
-	c = moves[random.randrange(1, 4)]
+  c = moves[random.randrange(1, 4)]
 else:
-	c = moves[b]
+  c = moves[b]
 
 f.write(c)
 f.close()
