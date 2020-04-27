@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+
+# This comment does something, I think.
 
 #
 # This is the first time trying python. Because js can't really edit files.
