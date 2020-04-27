@@ -8,15 +8,23 @@ import os, requests, time, random
 move = "up"
 
 class mainThing:
+  # Mostly stolen from https://github.com/programical/gitland/blob/master/server.py
+  # Since I don't know anything
   def main(self):
-        while True:
-            update()
-            os.system("git add -A")
-            os.system("git commit -m \"next turn\"")
-            os.system("git push origin master")
-            time.sleep(420)
+     while True:
+       update()
+       os.system("git add -A")
+       os.system("git commit -m turn")
+       os.system("git push origin master")
+       time.sleep(420)
   
   def update():
+    
+    text = requests.get(
+       "https://raw.githubusercontent.com/icecream17/gitland-client/master/act",
+       headers={"Cache-Control": "no-cache", "Pragma": "no-cache"}
+    ).text.strip()
+    
     moves = ["up", "down", "left", "right"]
 
     a = random.randrange(1, 1000) % 2
@@ -30,5 +38,4 @@ class mainThing:
     
     move = c
     
-    f.write(c)
-    f.close()
+    open("map", "w").write(c)
